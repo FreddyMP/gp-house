@@ -1,0 +1,90 @@
+#header-full{
+    background-color: #1a2d3b;
+    height: 300px;
+}
+#header-content{
+    width: 70%;
+    margin-left: 15%;
+}
+#side-left{
+    color: white;
+}
+#header-content-top{
+    padding: 25px;
+    border-bottom: solid, 3px, white;
+}
+#header-content-bottom{
+    color:thistle;
+    padding: 25px;
+    border-bottom: solid, 1px, white;
+}
+.enlace-menu-top{
+    margin-right: 50px;
+    text-decoration: none;
+    color:#4faf51 ;
+}
+#buttom-upgrade{
+    background-color: #4faf51;
+    color: white;
+}
+i{
+    color: gray;
+    margin-left: 25px;
+    font-size: 25px;
+}
+#photo-perfil{
+    margin-left: 25px;
+    border-radius: 23px;
+}
+#side-left{
+    float: left;
+}
+#side-right{
+    position: absolute;
+    margin-left: 50%;
+    width: 235px;
+}
+@media (max-width: 700px) {
+    #side-right{
+        margin-left: 40%;
+    }
+}
+@media (max-width: 600px) {
+    #header-content{
+        width: 100%;
+        margin-left: 0%;
+    }
+    #menu{
+        font-size: 10px;
+    }
+    .enlace-menu-top{
+        margin-right: 25px;
+    }
+
+}
+@media (max-width: 500px) {
+    #header-content-top{
+        font-size: 10px;
+        width: 95%;
+    }
+    i{
+
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    #buttom-upgrade{
+        font-size: 10px;
+    }
+    #side-right{
+        margin-left: 33%;
+    }
+    #photo-perfil{
+        margin-left: 10px;
+        border-radius: 23px;
+    }
+}
+@media (max-width: 350px) {
+    #side-right{
+       width: 180px;
+    }
+}
