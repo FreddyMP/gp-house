@@ -6,7 +6,7 @@
         }
         function add_agente($tipo, $nombre, $correo,$telefono, $contraseña){
             include("../../../backend/cone.php");
-            $query= "INSERT INTO usuarios_agentes (tipo, nombre, correo, telefono, password_usuario, membresia) values ('$tipo','$nombre','$correo','$telefono', '$contraseña','true')";
+            $query= "INSERT INTO usuarios_agentes (tipo, nombre, correo, telefono, password_usuario) values ('$tipo','$nombre','$correo','$telefono', '$contraseña')";
             $conexion->query($query);
         }
     }

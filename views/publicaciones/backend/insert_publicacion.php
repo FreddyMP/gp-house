@@ -17,6 +17,7 @@
     }
     else{
         $vigilancia = 0;
+        echo "Vigilancia: ".$vigilancia;
     }
     if(isset($_POST["ascensor"])){
         $ascensor= $_POST["ascensor"];
@@ -259,23 +260,47 @@
     }
     
     $foto= $_FILES["foto"]["name"];
+    $temporal = $_FILES['foto']['tmp_name'];
+    echo $temporal;
+
+    $directorio = '../../../asset/';
+    if($subir= $directorio.basename($_FILES['foto']['name'])){
+        echo "la base si funciona";
+    }else{
+        echo "la base no funciona";
+    }
+    if(move_uploaded_file($temporal, $subir)){
+        $foto = $_FILES['foto']['name'];
+        echo $foto;
+    }else{
+        echo "no subio";
+    }
 
     $publicaciones = new Publicaciones();
-    echo $foto;
-    $fotos_publicacion = new Fotos();
-
+    $fotos_publicacion= new Fotos();
+    include("../../../backend/cone.php");
 
     $publicaciones->insert_publicacion($foto,$titulo,$vigilancia,$ascensor,$tipo_inmueble,$tipo_contrato,$descripcion,$provincia,$municipio, $longitud, $latitud,$id_agente, $sector,$residencial, $condominio, $cerrado, $mt2_construccion, $mt2_terreno,$niveles,$habitaciones,$baños, $piscina, $jardin, $parqueo, $terraza, $balcon, $gimnasio, $jacuzzi, $area_ninos,$cuotas, $precio_completo, $area_lavado, $tipo_deposito );
     
-    $publicaciones->last_publicacion();
-
-    include("../../../backend/cone.php");
-    $consulta_last= $conexion->query($publicaciones->consulta_query);
+    #$publicaciones->last_publicacion();
+    
+    $consulta_last= $conexion->query("SELECT * FROM publicaciones ORDER BY id_publicacion DESC LIMIT 1");
     $resultado_last = $consulta_last->fetch_assoc();
     
-    echo "<br> <br> <br> <br> <br> <br>". $resultado_last["id_publicacion"];
+    echo $resultado_last["id_publicacion"];
+    echo $id_agente;
+    echo $foto;
+
     $id_last_publicacion = $resultado_last["id_publicacion"];
-    $fotos_publicacion->insert_picture($foto, $id_agente, $id_last_publicacion);
+    $consulta_query ="INSERT INTO fotos (nombre, id_agente,id_publicacion) values('$foto',$id_agente,$id_last_publicacion)";
+    $conexion->query($consulta_query);
+
+    
+    #$fotos_publicacion->insert_picture($foto, $temporal);
+   
+    #header("location:../../../asset");
+
+
 
     #header("location:../lista_publicaciones.php");
 ?>

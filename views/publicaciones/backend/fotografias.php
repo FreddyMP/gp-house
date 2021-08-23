@@ -4,17 +4,13 @@
         function Fotos(){
             $this->ruta= "../../../backend/cone.php";
         }
-        function insert_picture($foto, $agente, $publicacion){
-                include($this->ruta);
+        function insert_picture($foto, $temporal){
                 $directorio = '../../../asset/img_publicaciones/';
-                $subir= $directorio.basename($_FILES['foto']['name']);
-                move_uploaded_file($_FILES['foto']['tmp_name'], $subir);
-                $foto = $_FILES['foto']['name'];
-                echo $foto;
+                $subir= $directorio.basename($foto);
+                move_uploaded_file($temporal, $subir);
+                $foto2 = $foto;
+                echo $foto2;
     
-                $consulta_query ="INSERT INTO fotos (nombre, id_agente,id_publicacion) values
-                ('$foto','$agente','$publicacion')";
-                $conexion->query($consulta_query);
         }
 
     }

@@ -214,10 +214,10 @@
             </div>
             <div id="campos" class="row"> 
                 <div class="col-md-3" id="habitaciones"><br>
-                    <input class="form-control" value="0"  type="number" placeholder="Habitaciones" name="habitaciones" >
+                    <input class="form-control" type="number" placeholder="Habitaciones" name="habitaciones" >
                 </div>
                 <div class="col-md-3"  id="baños"><br>
-                    <input class="form-control" value="0"  type="number" placeholder="Baños" name="baños">
+                    <input class="form-control" type="number" placeholder="Baños" name="baños">
                 </div>
                 <div class="col-md-3" id="parqueos"><br>
                     <input class="form-control"  type="number" placeholder="Parqueos" name="parqueos" >

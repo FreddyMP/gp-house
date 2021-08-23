@@ -23,7 +23,7 @@
         <div id="publicaciones-list">
             <div id="publicacion">
                 <div class="row">
-                    <div class="col-md-3" style=" height:200px; border-radius:8px; background-image: url(../../asset/img_publicaciones/<?php echo $info["foto_principal"];?>); background-size:cover; ">
+                    <div class="col-md-3" style=" height:200px; border-radius:8px; background-image: url(../../asset/<?php echo $info["foto_principal"];?>); background-size:cover; ">
                       
                     </div>
                     <div class="col-md-6">
