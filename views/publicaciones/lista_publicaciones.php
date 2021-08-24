@@ -33,7 +33,7 @@
                     <div class="col-md-3 row">
                         <div class='col-md-12'>
                             <a class="btn btn-success col-md-12 " style="margin-bottom: 15px;"> <small>Ver Publicacion</small></a> <br>
-                            <a class="btn btn-success col-md-12 " style="margin-bottom: 15px;"> <small>Fotos</small></a> <br>
+                            <a href="subir_fotos.php?id=<?php echo $info["id_publicacion"];?>" class="btn btn-success col-md-12 " style="margin-bottom: 15px;"> <small>Fotos</small></a> <br>
                             <a href="editar.php?id=<?php echo $info["id_publicacion"];?>" class="btn btn-success  col-md-12 "style="margin-bottom: 15px;"> <small>Editar</small></a> <br> 
                             <a class="btn btn-success col-md-12 "  data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $info["id_publicacion"];?>"> <small>Eliminar</small></a> <br>
                         </div>
