@@ -302,5 +302,5 @@
 
 
 
-    #header("location:../lista_publicaciones.php");
+    header("location:../lista_publicaciones.php");
 ?>

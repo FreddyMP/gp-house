@@ -27,7 +27,7 @@
                       
                     </div>
                     <div class="col-md-6">
-                        <p> <strong><?php echo $info["titulo"];?></strong></p>
+                        <p> <strong><?php echo $id." ".$info["titulo"];?></strong></p>
                         <p><?php echo $info["descripcion"];?></p>
                     </div>
                     <div class="col-md-3 row">

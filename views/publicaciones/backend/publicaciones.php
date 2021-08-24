@@ -7,7 +7,7 @@ class Publicaciones {
     }
   
     function all_publicaciones($id){   
-        $this->consulta_query = "SELECT * FROM publicaciones  where id_agente = $id ORDER BY id_publicacion DESC";
+        $this->consulta_query = "SELECT * FROM publicaciones  where id_agente = $id order by id_publicacion desc ";
         return $this->consulta_query;
     }
     function last_publicacion(){  

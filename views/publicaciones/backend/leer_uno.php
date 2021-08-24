@@ -2,10 +2,9 @@
 include("publicaciones.php");
 include("../../backend/cone.php");
 
-$listado = new Publicaciones();
 $id = $_GET["id"];
-$listado->one_publicaciones($id);
-$lista_publicaciones= $conexion->query($listado->consulta_query);
+
+$lista_publicaciones= $conexion->query("SELECT * FROM publicaciones ORDER BY id_publicacion DESC LIMIT 1");
 $datos = $lista_publicaciones->fetch_assoc();
 
 ?>

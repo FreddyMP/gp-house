@@ -12,6 +12,7 @@
     <div id="fondo">
         .
     </div>
+    <form action="backend/editar.php" method="post">
     <div id="box-full">
        <h4>Editando: <?php echo $datos["titulo"]; ?></h4>
        <input class="form-control" type="text" value=" <?php echo $datos["titulo"]; ?>" name="titulo" id="" placeholder="Titulo"><br>
@@ -60,19 +61,24 @@
             <option value="Independencia">Independencia</option>
             <option value="Pedernales">Pedernales</option>
        </select><br>
-       <div class="col-md-12" id="select_municipio"><br>
+       Municipio
+       <div class="col-md-12" id="selec
+       Mt_municipio"><br>
             <br>
         </div><br>
+        Sector
         <input type="text" class="form-control" value="<?php echo $datos["sector"]; ?>" name="" id=""><br>
+        Longitud
        <input class="form-control" placeholder="longitud" value="<?php echo $datos["longitud"]; ?>" type="text" name="" id=""><br>
+       Latitud
        <input class="form-control" placeholder="latitud" value="<?php echo $datos["longitud"]; ?>" type="text" name="" id=""><br>
-       <select class="form-control" name="" id="">
+       <select class="form-control" name="tipo" id="">
            <option value=""><?php echo $datos["tipo_contrato"]; ?></option>
            <option value="">Alquiler</option>
            <option value="">Venta</option>
        </select><br>
        Residencial
-       <select class="form-control" name="" id="">
+       <select class="form-control" name="residencial" id="">
            <option value="<?php if($datos["residencial"]==0){echo ("NO");}else{echo ("SI");} ?>">
                <?php if($datos["residencial"]==0){
                    echo ("NO");
@@ -85,7 +91,7 @@
             <option value="0">NO</option>
        </select><br>
        Condominio
-       <select class="form-control" name="" id="">
+       <select class="form-control" name="condominio" id="">
             <option value="<?php if($datos["condominio"]==0){echo ("NO");}else{echo ("SI");} ?>">
                <?php if($datos["condominio"]==0){
                    echo ("NO");
@@ -98,7 +104,7 @@
             <option value="0">NO</option>
        </select><br>
        Cerrado
-       <select class="form-control" name="" id="">
+       <select class="form-control" name="cerrado" id="">
        <option value="<?php if($datos["cerrado"]==0){echo ("NO");}else{echo ("SI");} ?>">
                <?php if($datos["cerrado"]==0){
                    echo ("NO");
@@ -111,7 +117,7 @@
             <option value="0">NO</option>
        </select><br>
        Piscina
-       <select class="form-control" name="" id="">
+       <select class="form-control" name="piscina" id="">
        <option value="<?php if($datos["piscina"]==0){echo ("NO");}else{echo ("SI");} ?>">
                <?php if($datos["piscina"]==0){
                    echo ("NO");
@@ -124,7 +130,7 @@
             <option value="0">NO</option>
        </select><br>
        Jardin
-       <select class="form-control" name="" id="">
+       <select class="form-control" name="jardin" id="">
        <option value="<?php if($datos["jardin"]==0){echo ("NO");}else{echo ("SI");} ?>">
                <?php if($datos["jardin"]==0){
                    echo ("NO");
@@ -137,7 +143,7 @@
             <option value="0">NO</option>
        </select><br>
        Terraza
-       <select class="form-control" name="" id="">
+       <select class="form-control" name="terraza" id="">
        <option value="<?php if($datos["terraza"]==0){echo ("NO");}else{echo ("SI");} ?>">
                <?php if($datos["terraza"]==0){
                    echo ("NO");
@@ -150,7 +156,7 @@
             <option value="0">NO</option>
        </select><br>
         Balcon
-       <select class="form-control" name="" id="">
+       <select class="form-control" name="balcon" id="">
        <option value="<?php if($datos["balcon"]==0){echo ("NO");}else{echo ("SI");} ?>">
                <?php if($datos["balcon"]==0){
                    echo ("NO");
@@ -163,7 +169,7 @@
             <option value="0">NO</option>
        </select><br>
        Gimnasio
-       <select class="form-control" name="" id="">
+       <select class="form-control" name="gimnasio" id="">
        <option value="<?php if($datos["gimnasio"]==0){echo ("NO");}else{echo ("SI");} ?>">
                <?php if($datos["gimnasio"]==0){
                    echo ("NO");
@@ -176,7 +182,7 @@
             <option value="0">NO</option>
        </select><br>
        Jacuzzi
-       <select class="form-control" name="" id="">
+       <select class="form-control" name="jacuzzi" id="">
        <option value="<?php if($datos["jacuzzi"]==0){echo ("NO");}else{echo ("SI");} ?>">
                <?php if($datos["jacuzzi"]==0){
                    echo ("NO");
@@ -189,7 +195,7 @@
             <option value="0">NO</option>
        </select><br>
        Vigilancia
-       <select class="form-control" name="" id="">
+       <select class="form-control" name="vigilancia" id="">
        <option value="<?php if($datos["vigilancia"]==0){echo ("NO");}else{echo ("SI");} ?>">
                <?php if($datos["vigilancia"]==0){
                    echo ("NO");
@@ -202,7 +208,7 @@
             <option value="0">NO</option>
        </select><br>
        Ascensor
-       <select class="form-control" name="" id="">
+       <select class="form-control" name="ascensor" id="">
        <option value="<?php if($datos["ascensor"]==0){echo ("NO");}else{echo ("SI");} ?>">
                <?php if($datos["ascensor"]==0){
                    echo ("NO");
@@ -215,7 +221,7 @@
             <option value="0">NO</option>
        </select><br>
        Area de niños
-       <select class="form-control" name="" id="">
+       <select class="form-control" name="ninos" id="">
        <option value="<?php if($datos["area_de_ninos"]==0){echo ("NO");}else{echo ("SI");} ?>">
                <?php if($datos["area_de_ninos"]==0){
                    echo ("NO");
@@ -228,7 +234,7 @@
             <option value="0">NO</option>
        </select><br>
        Area de lavado
-       <select class="form-control" name="" id="">
+       <select class="form-control" name="lavado" id="">
        <option value="<?php if($datos["area_lavado"]==0){echo ("NO");}else{echo ("SI");} ?>">
                <?php if($datos["area_lavado"]==0){
                    echo ("NO");
@@ -240,25 +246,33 @@
             <option value="1">SI</option>
             <option value="0">NO</option>
        </select><br>
-
-       <input class="form-control" type="text" value="<?php echo $datos["mt2_construccion"]; ?>" name="" id="" placeholder="Mt2 de construccion"> <br>
-       <input class="form-control" type="text" value="<?php echo $datos["mt2_terreno"]; ?>" name="" id="" placeholder="Mt2 de terreno"><br>
-       <input class="form-control" type="number" value="<?php echo $datos["niveles"]; ?>" name="" id="" placeholder="Niveles"><br>
-       <input class="form-control" type="number" value="<?php echo $datos["habitaciones"]; ?>" name="" id="" placeholder="habitaciones"><br>
-       <input class="form-control" type="number" value="<?php echo $datos["banos"]; ?>" name="" id="" placeholder="baños"><br>
-       <input class="form-control" type="Number" value="<?php echo $datos["parqueos"]; ?>" name="" id="" placeholder="Parqueos"><br>
-       <input class="form-control" type="Number" value="<?php echo $datos["cuotas"]; ?>" name="" id="" placeholder="Mensualidad"><br>
-       <select class="form-control" name="" id="">
+        Mt2 Construccion
+       <input class="form-control" type="text" value="<?php echo $datos["mt2_construccion"]; ?>" name="construccion" id="" placeholder="Mt2 de construccion"> <br>
+       Mt2 Terreno
+       <input class="form-control" type="text" value="<?php echo $datos["mt2_terreno"]; ?>" name="terreno" id="" placeholder="Mt2 de terreno"><br>
+       Niveles
+       <input class="form-control" type="number" value="<?php echo $datos["niveles"]; ?>" name="niveles" id="" placeholder="Niveles"><br>
+       Habitaciones
+       <input class="form-control" type="number" value="<?php echo $datos["habitaciones"]; ?>" name="habitaciones" id="" placeholder="habitaciones"><br>
+       Banos
+       <input class="form-control" type="number" value="<?php echo $datos["banos"]; ?>" name="banos" id="" placeholder="baños"><br>
+       Parqueos
+       <input class="form-control" type="Number" value="<?php echo $datos["parqueos"]; ?>" name="parqueos" id="" placeholder="Parqueos"><br>
+       Mensualidad
+       <input class="form-control" type="Number" value="<?php echo $datos["cuotas"]; ?>" name="cuotas" id="" placeholder="Mensualidad"><br>
+       <select class="form-control" name="deposito" id="">
                 <option value="<?php echo $datos["tipo_deposito"]; ?>"><?php echo $datos["tipo_deposito"]; ?></option>
                 <option value="Sin deposito previo">Sin deposito previo</option>
                 <option value="Un mes adelantado">Un mes adelentado</option>
                 <option value="Un mes + 1">Un mes + 1</option>
                 <option value="Dos + 1">Dos + 1</option>
        </select><br>
-       <input class="form-control" type="Number" value="<?php echo $datos["precio_completo"]; ?>" name="" id="" placeholder="Precio">
+       Precio de venta
+       <input class="form-control" type="Number" value="<?php echo $datos["precio_completo"]; ?>" name="precio" id="" placeholder="Precio">
        <br><button class="btn btn-success">Guardar cambios</button>
 
     </div>
+    </form>
 </div>
 
 <?php
