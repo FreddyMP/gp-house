@@ -21,8 +21,11 @@
             otras imagenes
         </div><br>
         <div>
-            <button class="btn btn-success col-md-12">Subir otra imagen</button>
-        </div>
+            <a class="btn btn-info-dark col-md-12">Subir otra imagen</a>
+        </div><br>
+        <input class="form-control" type="file" name="foto"><br>
+        <button class="btn btn-success col-md-12">Guardar</button>
+
     </div>
     </form>
 </div>
