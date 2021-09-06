@@ -379,7 +379,7 @@
             </div>
 
             <div id="campos" class="row">
-                <div class="col-md-6"><br>
+                <div class="col-md-12"><br>
                     <input class="form-control" type="number" placeholder="Valor de venta" name="precio_completo" id="">
                 </div>
             </div>

@@ -17,7 +17,7 @@
             $_SESSION["correo"] = $correo;
             $_SESSION["tipo"] = $tipo;
             $_SESSION["id_usuario"] = $id_agente;
-            header("location:../../home/home.php");
+            header("location:../../publicaciones/lista_publicaciones.php");
         }else{
             header("location:../../login/login.php?log=true");
         }

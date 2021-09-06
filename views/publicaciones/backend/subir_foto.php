@@ -1,5 +1,6 @@
 <?php 
     include("../../../backend/cone.php");
+    session_start();
     $id_agente = $_SESSION["id_usuario"];
     $id_publicacion = $_POST["id_publicacion"];
         

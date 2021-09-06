@@ -1,6 +1,7 @@
 <?php
     include("../head/head.php");
     include("backend/leer_uno.php");
+    include("backend/fotos.php");
 ?>
 <link rel="stylesheet" href="../home/home.css">
 
@@ -12,21 +13,32 @@
     <div id="fondo">
         .
     </div>
-    <form action="backend/editar.php" method="post">
-    <div id="box-full">
-       <h4>Editando: <?php echo $datos["titulo"]; ?></h4>
-       Foto principal- <a href="">Cambiar</a>
-       <img class="img-fluid" src="../../asset/<?php echo $datos["foto_principal"]; ?>" alt=""><br>
-        <div>
-            otras imagenes
-        </div><br>
-        <div>
-            <a class="btn btn-info-dark col-md-12">Subir otra imagen</a>
-        </div><br>
-        <input class="form-control" type="file" name="foto"><br>
-        <button class="btn btn-success col-md-12">Guardar</button>
+    <form action="backend/subir_foto.php" method="post" enctype="multipart/form-data">
+        <div id="box-full">
+        <h4>Editando: <?php echo $datos["titulo"]; ?></h4>
+        Foto principal- <a href="">Cambiar</a>
+        <img class="img-fluid" src="../../asset/<?php echo $datos["foto_principal"]; ?>" alt=""><br>
+            <div>
+             <?php
+              $id_publicacion = $_GET["id"];
+              $fotos = $conexion->query("SELECT nombre, id_publicacion FROM fotos where id_publicacion = $id_publicacion");
+                while($lista_fotos = $fotos->fetch_assoc()){
+                    ?><hr>
+                        <a class="btn btn-danger" href="">Eliminar</a><br>
+                        <img style="padding-top:25px"  class="img-fluid" src="../../asset/<?php echo $lista_fotos["nombre"]; ?>" alt="" srcset="">
+                    <?php
+                }
+             ?>
+            </div><br>
+            <div>
+                <a class="btn btn-info-dark col-md-12">Subir otra imagen</a>
+            </div><br>
+            <input class="form-control" value="<?php echo $_GET["id"] ?>" type="hidden" name="id_publicacion"><br>
 
-    </div>
+            <input class="form-control" type="file" name="foto"><br>
+            <button class="btn btn-success col-md-12">Guardar</button>
+
+        </div>
     </form>
 </div>
 

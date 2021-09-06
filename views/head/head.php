@@ -1,6 +1,5 @@
 <?php
     session_start();
-
     if(isset($_SESSION["correo"])){
 ?>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -11,8 +10,20 @@
     <div id="header-content">
         <div class="row" id="header-content-top">
             <div id="side-left">
-               <img src="../../img/house-icon.png" width="40" alt="">
-                GP-HOUSE
+               
+                <div class="dropdown">
+  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+  <img src="../../img/house-icon.png" width="40" alt="">
+                Real state
+
+  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li><a class="dropdown-item" href="#">Mensajeria</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
             </div>
             <div id="side-right">
                 <a class="btn btn" id="buttom-upgrade">
@@ -20,6 +31,7 @@
                 </a> 
                 <i class="fa fa-bell"></i>
                 <img id="photo-perfil" src="../../img/img-peke.jpg" width="45" alt=""/>
+                <a style="margin-left:10px" href=""> v</a>
             </div>
         </div>
         <hr style="color: gainsboro;">

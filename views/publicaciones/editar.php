@@ -18,7 +18,7 @@
        <input type="hidden" name="id" value="<?php echo $_GET["id"]?>">
        <input class="form-control" type="text" value="<?php echo $datos["titulo"];?>" name="titulo" id="" placeholder="Titulo"><br>
        <textarea class="form-control" name="descripcion" id="" placeholder="descripcion" rows="5"><?php echo $datos["descripcion"] ?></textarea><br>
-       <select class="form-control" name="tipo_inmueble" id="">
+       <select class="form-control col-md-6" name="tipo_inmueble" id="">
             <option value="<?php echo $datos["tipo_inmueble"]; ?>"><?php echo $datos["tipo_inmueble"]; ?></option>
             <option value="Casa">Casa</option>
             <option value="Apartamento">Apartamento</option>
@@ -28,7 +28,7 @@
             <option value="Villa">Villa</option>
             <option value="Solar">Solar</option>
        </select><br>
-       <select class="form-control" name="provincia" id="provincias">
+       <select class="form-control col-md-6" name="provincia" id="provincias">
             <option value="<?php echo $datos["provincia"]; ?>"><?php echo $datos["provincia"]; ?></option>
             <option value="Santo Domingo">Santo Domingo</option>
             <option value="Santiago">Santiago</option>
@@ -269,7 +269,7 @@
                 <option value="Dos + 1">Dos + 1</option>
        </select><br>
        Precio de venta
-       <input class="form-control" type="Number" value="<?php echo $datos["precio_completo"]; ?>" name="precio" id="" placeholder="Precio">
+       <input class="form-control " type="Number" value="<?php echo $datos["precio_completo"]; ?>" name="precio" id="" placeholder="Precio">
        <br><button class="btn btn-success">Guardar cambios</button>
 
     </div>
